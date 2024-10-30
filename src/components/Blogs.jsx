@@ -19,7 +19,7 @@ const Blogs = () => {
             2024
           </p>
           <p
-            className={`flex items-center text-slate-200 text-xl font-semibold tracking-tight group-hover:text-teal-300`}
+            className={`flex items-center text-slate-200 text-lg font-semibold tracking-tight group-hover:text-teal-300`}
           >
             Integrating Algolia Search with WordPress
             <RxArrowTopRight />
