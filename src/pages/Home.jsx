@@ -60,10 +60,21 @@ const Home = () => {
           ))}
         </div>
         <div className="flex items-center gap-5 mt-10">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=suyogluitel235@gmail.com&su=Your%20Subject%20Here&body=Your%20Message%20Here"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-tip="Send Email"
+          >
+            <MdOutlineEmail
+              fontSize={26}
+              className="text-[#94A3B8] hover:text-teal-300 cursor-pointer"
+            />
+          </a>
           <Link to="https://github.com/SuyogLuitel" target="_blank">
             <FaGithub
               fontSize={26}
-              className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
+              className="text-[#94A3B8] hover:text-teal-300 cursor-pointer"
             />
           </Link>
           <Link
@@ -72,27 +83,27 @@ const Home = () => {
           >
             <FaLinkedin
               fontSize={26}
-              className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
+              className="text-[#94A3B8] hover:text-teal-300 cursor-pointer"
             />
           </Link>
-          <FaCodepen
-            fontSize={26}
-            className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
-          />
-          <IoLogoInstagram
-            fontSize={26}
-            className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
-          />
-          <FaXTwitter
-            fontSize={26}
-            className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
-          />
-          <a href="mailto:suyogluitel235@gmail.com" rel="noopener noreferrer">
-            <MdOutlineEmail
+          <Link to="https://codepen.io/" target="_blank">
+            <FaCodepen
               fontSize={26}
-              className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
+              className="text-[#94A3B8] hover:text-teal-300 cursor-pointer"
             />
-          </a>
+          </Link>
+          <Link to="https://www.instagram.com/" target="_blank">
+            <IoLogoInstagram
+              fontSize={26}
+              className="text-[#94A3B8] hover:text-teal-300 cursor-pointer"
+            />
+          </Link>
+          <Link to="https://x.com/" target="_blank">
+            <FaXTwitter
+              fontSize={26}
+              className="text-[#94A3B8] hover:text-teal-300 cursor-pointer"
+            />
+          </Link>
         </div>
       </div>
       <div className="w-[60%] flex flex-col gap-10 mt-[105px] overflow-y-auto pr-40">
