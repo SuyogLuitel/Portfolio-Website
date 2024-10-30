@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="text-[#94A3B8] text-lg font-medium flex flex-col gap-10 pl-20">
+    <div className="text-[#94A3B8] text-base font-medium flex flex-col gap-10 pl-20">
       <p>
         Back in 2012, I decided to try my hand at creating custom Tumblr themes
         and tumbled head first into the rabbit hole of coding and web

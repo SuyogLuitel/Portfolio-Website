@@ -106,7 +106,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="w-[60%] flex flex-col gap-10 mt-[105px] overflow-y-auto pr-32">
+      <div className="w-[60%] flex flex-col gap-20 mt-32 overflow-y-auto pr-32">
         <div id="about">
           <About />
         </div>
