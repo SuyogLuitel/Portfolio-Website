@@ -50,15 +50,16 @@ const Home = () => {
 
   return (
     <div className="bg-slate-900 w-full h-screen flex relative">
-      <div className="w-[40%] pl-40 pt-24 flex flex-col gap-6">
+      <div className="w-[40%] pl-40 pt-20 flex flex-col gap-6">
         <h1 className="text-[#C4D1EC] text-6xl font-bold tracking-tight">
           Suyog Luitel
         </h1>
         <p className="text-slate-200 text-2xl font-semibold tracking-tight">
           Junior Frontend Engineer
         </p>
-        <p className="text-[#94A3B8] leading-normal text-lg font-medium w-80">
-          I build pixel-perfect, engaging, and accessible digital experiences.
+        <p className="text-slate-400 leading-normal text-lg font-medium w-80">
+          Crafting seamless, high-quality, and user-friendly digital experiences
+          for all.
         </p>
         <div className="flex flex-col gap-8 mt-10">
           {sections.map((item) => (
