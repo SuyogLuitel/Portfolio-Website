@@ -20,7 +20,7 @@ const Home = () => {
   ];
 
   return (
-    <div className="bg-slate-900 w-full h-screen flex">
+    <div className="bg-slate-900 w-full h-screen flex relative">
       <div className="w-[40%] pl-40 pt-24 flex flex-col gap-6">
         <h1 className="text-[#C4D1EC] text-6xl font-bold tracking-tight">
           Suyog Luitel

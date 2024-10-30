@@ -1,12 +1,18 @@
 import React from "react";
 import { RxArrowRight, RxArrowTopRight } from "react-icons/rx";
 import project from "../assets/project1.webp";
+import { useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigate = useNavigate();
   return (
     <div className="ml-11 mb-20 flex flex-col gap-7">
       <div className="group flex gap-7 p-8 items-start cursor-pointer rounded-md transition motion-reduce:transition-none hover:bg-slate-800/50">
-        <img src={project} alt="project" className="w-40 h-auto" />
+        <img
+          src={project}
+          alt="project"
+          className="w-40 h-auto border-2 border-slate-900 group-hover:border-slate-200/50 transition"
+        />
         <div className="flex flex-col gap-6">
           <p
             className={`flex items-center text-slate-200 text-xl font-semibold tracking-tight group-hover:text-teal-300`}
@@ -35,7 +41,10 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <p className="group flex items-center gap-1 hover:underline text-slate-200 text-xl font-semibold tracking-tight hover:text-teal-300 pl-8 cursor-pointer">
+      <p
+        onClick={() => navigate("/archive")}
+        className="group flex items-center gap-1 hover:underline text-slate-200 text-xl font-semibold tracking-tight hover:text-teal-300 pl-8 cursor-pointer"
+      >
         View Full Project Archive
         <RxArrowRight className="mt-1 group-hover:ml-1" />
       </p>
