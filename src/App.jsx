@@ -8,6 +8,7 @@ import { MdOutlineEmail } from "react-icons/md";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Projects from "./components/Projects";
+import Blogs from "./components/Blogs";
 
 const App = () => {
   const [active, setActive] = useState(1);
@@ -81,6 +82,7 @@ const App = () => {
         <About />
         <Experience />
         <Projects />
+        <Blogs />
       </div>
     </div>
   );
