@@ -7,6 +7,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
 import About from "./components/About";
 import Experience from "./components/Experience";
+import Projects from "./components/Projects";
 
 const App = () => {
   const [active, setActive] = useState(1);
@@ -76,9 +77,10 @@ const App = () => {
           />
         </div>
       </div>
-      <div className="w-[60%] flex flex-col gap-32 pt-[105px] overflow-y-auto pr-40">
+      <div className="w-[60%] flex flex-col gap-10 pt-[105px] overflow-y-auto pr-40">
         <About />
         <Experience />
+        <Projects />
       </div>
     </div>
   );

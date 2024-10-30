@@ -4,7 +4,7 @@ import { RxArrowTopRight } from "react-icons/rx";
 
 const Experience = () => {
   return (
-    <div className="ml-11 mb-20 flex flex-col gap-7">
+    <div className="mt-20 ml-11 mb-20 flex flex-col gap-7">
       <div className="group flex gap-3 p-8 items-start cursor-pointer rounded-md transition motion-reduce:transition-none hover:bg-slate-800/50">
         <p className="text-[#94A3B8] leading-normal text-sm font-medium w-80">
           2024 - PRESENT
@@ -44,7 +44,7 @@ const Experience = () => {
           </div>
         </div>
       </div>
-      <p className="group flex items-center text-slate-200 text-xl font-semibold tracking-tight hover:text-teal-300 pl-8 cursor-pointer">
+      <p className="group flex items-center hover:underline text-slate-200 text-xl font-semibold tracking-tight hover:text-teal-300 pl-8 cursor-pointer">
         View Full Resume
         <RxArrowTopRight className="mt-1 group-hover:mb-2" />
       </p>
