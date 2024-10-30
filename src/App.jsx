@@ -6,6 +6,7 @@ import { IoLogoInstagram } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
 import { MdOutlineEmail } from "react-icons/md";
 import About from "./components/About";
+import Experience from "./components/Experience";
 
 const App = () => {
   const [active, setActive] = useState(1);
@@ -18,7 +19,7 @@ const App = () => {
 
   return (
     <div className="bg-slate-900 w-full h-screen flex">
-      <div className="w-1/2 pl-40 pt-24 flex flex-col gap-6">
+      <div className="w-[40%] pl-40 pt-24 flex flex-col gap-6">
         <h1 className="text-[#C4D1EC] text-6xl font-bold tracking-tight">
           Suyog Luitel
         </h1>
@@ -75,8 +76,9 @@ const App = () => {
           />
         </div>
       </div>
-      <div className="w-1/2 pt-24 pr-40 overflow-y-auto">
+      <div className="w-[60%] flex flex-col gap-32 pt-[105px] overflow-y-auto pr-40">
         <About />
+        <Experience />
       </div>
     </div>
   );
