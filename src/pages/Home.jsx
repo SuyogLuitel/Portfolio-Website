@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
 import { FaCodepen } from "react-icons/fa";
@@ -23,6 +23,30 @@ const Home = () => {
     { id: "experience", name: "EXPERIENCE" },
     { id: "projects", name: "PROJECTS" },
   ];
+
+  useEffect(() => {
+    const handleScroll = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id);
+        }
+      });
+    };
+
+    const options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver(handleScroll, options);
+    sections.forEach((section) => {
+      const element = document.getElementById(section.id);
+      if (element) observer.observe(element);
+    });
+
+    return () => observer.disconnect();
+  }, [sections]);
 
   return (
     <div className="bg-slate-900 w-full h-screen flex relative">
