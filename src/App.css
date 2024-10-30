@@ -8,3 +8,11 @@
   background-color: #5eead4;
   color: #134e4a;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.scroll-container {
+  overflow-y: scroll;
+}

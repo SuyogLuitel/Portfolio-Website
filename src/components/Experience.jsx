@@ -1,6 +1,7 @@
 import React from "react";
 import { BsDot } from "react-icons/bs";
 import { RxArrowTopRight } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 const Experience = () => {
   return (
@@ -16,7 +17,7 @@ const Experience = () => {
             Junior Frontend Engineer
             <BsDot />
             Ayata Inc.
-            <RxArrowTopRight className="mt-1 group-hover:mb-2" />
+            <RxArrowTopRight className="mt-1 group-hover:ml-1" />
           </p>
           <p className="text-[#94A3B8] leading-normal text-justify text-[15px] font-medium">
             Build and maintain critical components used to construct Klaviyo’s
@@ -44,10 +45,12 @@ const Experience = () => {
           </div>
         </div>
       </div>
-      <p className="group flex items-center hover:underline text-slate-200 text-xl font-semibold tracking-tight hover:text-teal-300 pl-8 cursor-pointer">
-        View Full Resume
-        <RxArrowTopRight className="mt-1 group-hover:mb-2" />
-      </p>
+      <Link to="/resume.pdf" target="_blank">
+        <p className="group flex items-center hover:underline text-slate-200 text-xl font-semibold tracking-tight hover:text-teal-300 pl-8 cursor-pointer">
+          View Full Resume
+          <RxArrowTopRight className="mt-1 group-hover:ml-1" />
+        </p>
+      </Link>
     </div>
   );
 };

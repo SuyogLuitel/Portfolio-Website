@@ -9,14 +9,19 @@ import About from "../components/About";
 import Experience from "../components/Experience";
 import Projects from "../components/Projects";
 import Blogs from "../components/Blogs";
+import { Link } from "react-router-dom";
+
+const scrollToSection = (id) => {
+  document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+};
 
 const Home = () => {
-  const [active, setActive] = useState(1);
+  const [active, setActive] = useState("about");
 
-  const option = [
-    { id: 1, name: "ABOUT" },
-    { id: 2, name: "EXPERIENCE" },
-    { id: 3, name: "PROJECTS" },
+  const sections = [
+    { id: "about", name: "ABOUT" },
+    { id: "experience", name: "EXPERIENCE" },
+    { id: "projects", name: "PROJECTS" },
   ];
 
   return (
@@ -32,34 +37,44 @@ const Home = () => {
           I build pixel-perfect, engaging, and accessible digital experiences.
         </p>
         <div className="flex flex-col gap-8 mt-10">
-          {option?.map((item, index) => (
+          {sections.map((item) => (
             <div
+              key={item.id}
+              onClick={() => {
+                scrollToSection(item.id);
+                setActive(item.id);
+              }}
               className={`group text-sm font-bold tracking-widest uppercase text-[#94A3B8] flex items-center gap-4 cursor-pointer ${
-                active === item?.id && "text-slate-200"
+                active === item.id && "text-slate-200"
               }`}
-              key={index}
-              onClick={() => setActive(item?.id)}
             >
               <hr
                 className={`border-t-2 group-hover:w-20 group-hover:border-slate-200 ${
-                  active === item?.id
+                  active === item.id
                     ? "w-20 border-slate-200"
                     : "w-10 border-[#94A3B8]"
                 }`}
               />
-              {item?.name}
+              {item.name}
             </div>
           ))}
         </div>
         <div className="flex items-center gap-5 mt-10">
-          <FaGithub
-            fontSize={26}
-            className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
-          />
-          <FaLinkedin
-            fontSize={26}
-            className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
-          />
+          <Link to="https://github.com/SuyogLuitel" target="_blank">
+            <FaGithub
+              fontSize={26}
+              className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
+            />
+          </Link>
+          <Link
+            to="https://www.linkedin.com/in/suyog-luitel-4349312a0/"
+            target="_blank"
+          >
+            <FaLinkedin
+              fontSize={26}
+              className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
+            />
+          </Link>
           <FaCodepen
             fontSize={26}
             className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
@@ -72,16 +87,24 @@ const Home = () => {
             fontSize={26}
             className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
           />
-          <MdOutlineEmail
-            fontSize={26}
-            className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
-          />
+          <a href="mailto:suyogluitel235@gmail.com" rel="noopener noreferrer">
+            <MdOutlineEmail
+              fontSize={26}
+              className="text-[#94A3B8] hover:text-[#C4D0EC] cursor-pointer"
+            />
+          </a>
         </div>
       </div>
-      <div className="w-[60%] flex flex-col gap-10 pt-[105px] overflow-y-auto pr-40">
-        <About />
-        <Experience />
-        <Projects />
+      <div className="w-[60%] flex flex-col gap-10 mt-[105px] overflow-y-auto pr-40">
+        <div id="about">
+          <About />
+        </div>
+        <div id="experience">
+          <Experience />
+        </div>
+        <div id="projects">
+          <Projects />
+        </div>
         <Blogs />
       </div>
     </div>
