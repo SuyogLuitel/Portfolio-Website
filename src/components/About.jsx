@@ -25,42 +25,42 @@ const About = () => {
       <div className="flex items-center gap-5">
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
-          className="w-10 cursor-pointer"
+          className="w-10 h-10 cursor-pointer transition-transform transform hover:scale-110"
         />
 
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
-          className="w-11 cursor-pointer"
+          className="w-11 h-11 cursor-pointer transition-transform transform hover:scale-110"
         />
 
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-          className="w-10 cursor-pointer"
+          className="w-10 h-10 cursor-pointer transition-transform transform hover:scale-110"
         />
 
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
-          className="w-10 cursor-pointer"
+          className="w-10 h-10 cursor-pointer transition-transform transform hover:scale-110"
         />
 
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
-          className="w-10 cursor-pointer"
+          className="w-10 h-10 cursor-pointer transition-transform transform hover:scale-110"
         />
 
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
-          className="w-10 cursor-pointer"
+          className="w-10 h-10 cursor-pointer transition-transform transform hover:scale-110"
         />
 
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-          className="w-10 cursor-pointer"
+          className="w-10 h-10 cursor-pointer transition-transform transform hover:scale-110"
         />
 
         <img
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg"
-          className="w-10 cursor-pointer"
+          className="w-10 h-10 cursor-pointer transition-transform transform hover:scale-110"
         />
       </div>
     </div>

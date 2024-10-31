@@ -1,0 +1,102 @@
+[
+  {
+    "image": "/project9.png",
+    "name": "Staymandu - Hotel Recommendation System",
+    "description": "Staymandu - Hotel Recommendation System using React.js and tailwind css which recommends hotel based on user's location with stripe as a payment option.",
+    "lang": ["React", "Tailwind CSS", "Stripe"],
+    "link": "https://github.com/SuyogLuitel/staymandu-frontend",
+    "home": true,
+    "github": true,
+    "year": "2024",
+    "madeAt": "Self"
+  },
+  {
+    "image": "/project8.png",
+    "name": "Live Docs",
+    "description": "Real time collaborative Live Docs using Next.js, Tailwind css, Clerk for authentication and Live Blocks for real-time collaboration with permission feature.",
+    "lang": ["Next", "Tailwind CSS", "Clerk", "Live Blocks"],
+    "link": "https://github.com/SuyogLuitel/live-docs",
+    "home": true,
+    "github": true,
+    "year": "2024",
+    "madeAt": "Self"
+  },
+  {
+    "image": "/project7.png",
+    "name": "Furniro - A Furniture Ecommerce App",
+    "description": "A furniture ecommerce web application using React.js and tailwind css.",
+    "lang": ["React", "Tailwind CSS"],
+    "link": "https://furniro-gamma.vercel.app/",
+    "home": true,
+    "github": false,
+    "year": "2024",
+    "madeAt": "Self"
+  },
+  {
+    "image": "/project6.png",
+    "name": "Food Delivery App",
+    "description": "A food delivery web application using React.js.",
+    "lang": ["React", "CSS"],
+    "link": "https://food-delivery-gilt-eight.vercel.app/",
+    "home": false,
+    "github": false,
+    "year": "2024",
+    "madeAt": "Self"
+  },
+  {
+    "image": "/project5.png",
+    "name": "Paradise Study Room",
+    "description": "A landing page for an educational institute named Paradise Study Room.",
+    "lang": ["React", "Tailwind CSS"],
+    "link": "https://paradise-study.vercel.app/",
+    "home": true,
+    "github": false,
+    "year": "2024",
+    "madeAt": "Self"
+  },
+  {
+    "image": "/project4.png",
+    "name": "Design Verse",
+    "description": "A landing page for an IT company named Design Verse.",
+    "lang": ["React", "Tailwind CSS"],
+    "link": "https://design-verse.vercel.app/",
+    "home": false,
+    "github": false,
+    "year": "2024",
+    "madeAt": "Self"
+  },
+  {
+    "image": "/project3.png",
+    "name": "Modern UI/UX Hoobank Bussiness Website",
+    "description": "A modern looking landing page for a Hoobank Bussiness Website.",
+    "lang": ["React", "CSS"],
+    "link": "https://hoobank-roan.vercel.app/",
+    "home": false,
+    "github": false,
+    "year": "2023",
+    "madeAt": "Self"
+  },
+  {
+    "image": "/project2.png",
+    "name": "Modern UI/UX Gerichtn Restaurant Website",
+    "description": "A modern looking landing page for a Gerichtn restaurant.",
+    "lang": ["React", "CSS"],
+    "link": "https://gericht-restaurant-sepia-pi.vercel.app/",
+    "home": false,
+    "github": false,
+    "year": "2023",
+    "madeAt": "Self"
+  },
+
+  {
+    "image": "/project1.png",
+    "name": "Modern UI/UX GPT-3 Website",
+    "description": "A modern looking landing page for gpt 3.",
+    "lang": ["React", "CSS"],
+    "link": "https://gpt-3-mocha.vercel.app/",
+    "home": false,
+    "github": false,
+    "year": "2023",
+    "madeAt": "Self"
+  }
+]

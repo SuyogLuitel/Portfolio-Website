@@ -91,43 +91,25 @@ const Home = () => {
             rel="noopener noreferrer"
             data-tip="Send Email"
           >
-            <MdOutlineEmail
-              fontSize={26}
-              className="text-[#94A3B8] hover:text-teal-300 cursor-pointer"
-            />
+            <MdOutlineEmail className="w-8 h-8 transition-transform transform hover:scale-110 text-[#94A3B8] hover:text-teal-300 cursor-pointer" />
           </a>
           <Link to="https://github.com/SuyogLuitel" target="_blank">
-            <FaGithub
-              fontSize={26}
-              className="text-[#94A3B8] hover:text-teal-300 cursor-pointer"
-            />
+            <FaGithub className="w-7 h-7 transition-transform transform hover:scale-110 text-[#94A3B8] hover:text-teal-300 cursor-pointer" />
           </Link>
           <Link
             to="https://www.linkedin.com/in/suyog-luitel-4349312a0/"
             target="_blank"
           >
-            <FaLinkedin
-              fontSize={26}
-              className="text-[#94A3B8] hover:text-teal-300 cursor-pointer"
-            />
+            <FaLinkedin className="w-7 h-7 transition-transform transform hover:scale-110 text-[#94A3B8] hover:text-teal-300 cursor-pointer" />
           </Link>
           <Link to="https://codepen.io/" target="_blank">
-            <FaCodepen
-              fontSize={26}
-              className="text-[#94A3B8] hover:text-teal-300 cursor-pointer"
-            />
+            <FaCodepen className="w-7 h-7 transition-transform transform hover:scale-110 text-[#94A3B8] hover:text-teal-300 cursor-pointer" />
           </Link>
           <Link to="https://www.instagram.com/" target="_blank">
-            <IoLogoInstagram
-              fontSize={26}
-              className="text-[#94A3B8] hover:text-teal-300 cursor-pointer"
-            />
+            <IoLogoInstagram className="w-7 h-7 transition-transform transform hover:scale-110 text-[#94A3B8] hover:text-teal-300 cursor-pointer" />
           </Link>
           <Link to="https://x.com/" target="_blank">
-            <FaXTwitter
-              fontSize={26}
-              className="text-[#94A3B8] hover:text-teal-300 cursor-pointer"
-            />
+            <FaXTwitter className="w-7 h-7 transition-transform transform hover:scale-110 text-[#94A3B8] hover:text-teal-300 cursor-pointer" />
           </Link>
         </div>
       </div>

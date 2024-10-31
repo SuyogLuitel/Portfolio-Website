@@ -1,12 +1,21 @@
 import React from "react";
 import { RxArrowLeft, RxArrowTopRight } from "react-icons/rx";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
+import data from "../assets/projects.json";
+
+const shortenText = (text, maxLength) => {
+  if (text.length > maxLength) {
+    return text.slice(0, maxLength) + "...";
+  }
+  return text;
+};
 
 const Archive = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="bg-slate-900 w-full h-screen px-28 py-20">
+    <div className="bg-slate-900 w-full h-full px-20 py-14">
       <div className="flex flex-col gap-1">
         <p
           onClick={() => navigate("/")}
@@ -21,39 +30,48 @@ const Archive = () => {
       </div>
 
       <div className="mt-16">
-        <div className="flex justify-between items-center text-slate-200 leading-normal text-base font-medium border-b border-slate-800 pb-2">
-          <div className="flex-1 text-center">Year</div>
-          <div className="flex-1 text-center">Project</div>
-          <div className="flex-1 text-center">Made at</div>
-          <div className="flex-[3] text-center">Built with</div>{" "}
-          <div className="flex-1 text-center">Link</div>
+        <div className="flex items-center text-slate-200 leading-normal text-base font-medium border-b border-slate-800 pb-2">
+          <div className="w-[8%] text-center">Year</div>
+          <div className="w-[27%] text-center">Project</div>
+          <div className="w-[40%] text-center">Built with</div>
+          <div className="w-[25%] text-center">Link</div>
         </div>
 
-        <div className="flex justify-between items-center text-slate-200 leading-normal text-base font-medium my-5 border-b border-slate-800 pb-2">
-          <div className="flex-1 text-center text-sm text-[#94A3B8]">2023</div>
-          <div className="flex-1 text-center">Emerson Collective</div>
-          <div className="flex-1 text-center text-sm text-[#94A3B8]">
-            Upstatement
+        {data?.map((item, index) => (
+          <div
+            key={index}
+            className="flex items-center text-slate-200 leading-normal text-base font-medium my-5 border-b border-slate-800 pb-2"
+          >
+            <div className="w-[8%] text-center text-sm text-[#94A3B8]">
+              {item?.year}
+            </div>
+            <div className="w-[27%] text-center">{item?.name}</div>
+            <div className="w-[40%] flex items-center justify-center flex-wrap gap-3">
+              {item?.lang?.map((langItem, index1) => (
+                <div
+                  key={index1}
+                  className="bg-teal-400/10 text-sm font-medium leading-5 rounded-full px-4 py-2 text-teal-300"
+                >
+                  {langItem}
+                </div>
+              ))}
+            </div>
+            <Link
+              to={item?.link}
+              target="_blank"
+              className="w-[25%] flex items-center justify-start"
+            >
+              <div className="text-sm flex items-center text-[#94A3B8] cursor-pointer hover:text-teal-300 hover:underline">
+                <span>{shortenText(item?.link, 40)}</span>
+                {item?.github ? (
+                  <FaGithub className="text-lg" />
+                ) : (
+                  <RxArrowTopRight className="text-lg" />
+                )}
+              </div>
+            </Link>
           </div>
-          <div className="flex-[3] flex items-center gap-3 justify-center flex-wrap">
-            <div className="bg-teal-400/10 text-sm font-medium leading-5 rounded-full px-4 py-2 text-teal-300">
-              JavaScript
-            </div>
-            <div className="bg-teal-400/10 text-sm font-medium leading-5 rounded-full px-4 py-2 text-teal-300">
-              TypeScript
-            </div>
-            <div className="bg-teal-400/10 text-sm font-medium leading-5 rounded-full px-4 py-2 text-teal-300">
-              React
-            </div>
-            <div className="bg-teal-400/10 text-sm font-medium leading-5 rounded-full px-4 py-2 text-teal-300">
-              Next.js
-            </div>
-          </div>
-          <div className="flex-1 flex items-center justify-center text-sm text-[#94A3B8] cursor-pointer hover:text-teal-300 hover:underline">
-            emersoncollective.com
-            <RxArrowTopRight className="mt-1" />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
