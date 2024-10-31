@@ -9,7 +9,7 @@ const Experience = () => {
     <div className="ml-11 mb-20 flex flex-col gap-7">
       <div
         onClick={() => window.open("https://ayata.com.np/", "_blank")}
-        className="group flex gap-3 p-8 items-start cursor-pointer rounded-md transition motion-reduce:transition-none hover:bg-slate-800/50"
+        className="group flex gap-3 p-8 pt-8 items-start cursor-pointer rounded-md transition motion-reduce:transition-none hover:bg-slate-800/50"
       >
         <p className="text-[#94A3B8] leading-normal text-sm font-medium w-full">
           February 2024 - PRESENT
