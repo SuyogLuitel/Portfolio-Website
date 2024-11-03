@@ -31,10 +31,11 @@ const Archive = () => {
 
       <div className="mt-16">
         <div className="flex items-center text-slate-200 leading-normal text-base font-medium border-b border-slate-800 pb-2">
-          <div className="w-[8%] text-center">Year</div>
+          <div className="w-[5%] text-center">Year</div>
+          <div className="w-[10%] text-center">Made with</div>
           <div className="w-[27%] text-center">Project</div>
           <div className="w-[40%] text-center">Built with</div>
-          <div className="w-[25%] text-center">Link</div>
+          <div className="w-[20%] text-center">Link</div>
         </div>
 
         {data?.map((item, index) => (
@@ -42,8 +43,11 @@ const Archive = () => {
             key={index}
             className="flex items-center text-slate-200 leading-normal text-base font-medium my-5 border-b border-slate-800 pb-2"
           >
-            <div className="w-[8%] text-center text-sm text-[#94A3B8]">
+            <div className="w-[5%] text-center text-sm text-[#94A3B8]">
               {item?.year}
+            </div>
+            <div className="w-[10%] text-center text-sm text-[#94A3B8]">
+              {item?.madeAt}
             </div>
             <div className="w-[27%] text-center">{item?.name}</div>
             <div className="w-[40%] flex items-center justify-center flex-wrap gap-3">
@@ -59,10 +63,10 @@ const Archive = () => {
             <Link
               to={item?.link}
               target="_blank"
-              className="w-[25%] flex items-center justify-start"
+              className="w-[20%] flex items-center justify-start"
             >
               <div className="text-sm flex items-center text-[#94A3B8] cursor-pointer hover:text-teal-300 hover:underline">
-                <span>{shortenText(item?.link, 40)}</span>
+                <span>{shortenText(item?.link, 30)}</span>
                 {item?.github ? (
                   <FaGithub className="text-lg" />
                 ) : (
